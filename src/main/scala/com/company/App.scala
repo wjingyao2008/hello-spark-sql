@@ -38,7 +38,7 @@ object App {
     println(jdbcDF.take(10))
 
 
-    //test
+    //testg
   }
 
 }
