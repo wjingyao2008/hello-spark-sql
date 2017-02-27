@@ -36,6 +36,9 @@ object App {
       .load()
     jdbcDF.printSchema()
     println(jdbcDF.take(10))
+
+
+    //test
   }
 
 }
