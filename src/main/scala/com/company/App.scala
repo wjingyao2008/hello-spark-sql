@@ -1,4 +1,4 @@
-package com.company
+package com.SparkSqlReadParquet
 
 import org.apache.spark.sql.SparkSession
 /**
