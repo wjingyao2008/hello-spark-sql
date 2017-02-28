@@ -2,19 +2,19 @@ package com.company
 
 import org.apache.spark.sql.SparkSession
 
-object SparkSqlReadParquet {
+object SparkSqlRead {
 
 
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
       .builder()
       .master("local")
-      .appName("Spark SQL basic example")
+      .appName("Spark SQL read example")
       .getOrCreate()
 
     readParquet(spark)
 
-    readAvro(spark)
+//    readAvro(spark)
 
     System.in.read()
   }
@@ -31,5 +31,7 @@ object SparkSqlReadParquet {
     brandsDF.printSchema()
     brandsDF.createOrReplaceTempView("brands")
     spark.sql("SELECT brand_name FROM brands WHERE brand_code BETWEEN 3200 AND 3300").show()
+
+
   }
 }
